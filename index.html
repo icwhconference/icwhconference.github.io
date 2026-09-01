@@ -3,23 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <title>ICWH — International Conference for Women in Healthcare</title>
-  <meta name="description" content="ICWH — International Conference for Women in Healthcare. Empowering Women. Transforming Healthcare. Building a Better Future. ICWH 2026 — First Edition, December 2026, Umuahia, Abia State, Nigeria." />
+  <meta name="description" content="International Conference for Women in Healthcare — ICWH 2026: Rising Amazons in Healthcare. August 2026 · Umuahia, Abia State, Nigeria. Registration and programme coming soon." />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#B99AD6" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="ICWH — International Conference for Women in Healthcare" />
-  <meta property="og:description" content="ICWH — Empowering Women. Transforming Healthcare. Building A Better Future. ICWH 2026 — First Edition, December 2026, Umuahia, Nigeria. Registration & details coming soon." />
+  <meta property="og:description" content="ICWH — Rising Amazons in Healthcare: Equipping the Next Generation of Icons. ICWH 2026 — First Edition, August 2026, Umuahia, Nigeria." />
   <meta property="og:url" content="https://icwhconference.org/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/assets/images/og-placeholder.svg" />
 
-  <!-- Favicon placeholder -->
   <link rel="icon" href="/assets/icons/favicon.svg" />
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -34,13 +30,13 @@
       </a>
 
       <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu">
-        <span class="hamburger"></span>
+        <span class="hamburger" aria-hidden="true"></span>
       </button>
 
       <ul id="primary-navigation" class="nav-links" role="menubar">
         <li><a href="/#home" role="menuitem">Home</a></li>
+        <li><a href="/#vision" role="menuitem">Vision</a></li>
         <li><a href="/#about" role="menuitem">About</a></li>
-        <li><a href="/#why" role="menuitem">Why Attend</a></li>
         <li><a href="/#experience" role="menuitem">Experience</a></li>
         <li><a href="/#programme" role="menuitem">Programme</a></li>
         <li><a href="/#speakers" role="menuitem">Speakers</a></li>
@@ -55,19 +51,22 @@
   </header>
 
   <main>
-    <!-- HERO / ANTICIPATION -->
-    <section id="home" class="hero">
+    <!-- HERO -->
+    <section id="home" class="hero" aria-labelledby="hero-heading">
       <div class="container hero-grid">
         <div class="hero-text">
-          <p class="eyebrow">ICWH 2026 — FIRST EDITION</p>
-          <h1>International Conference for Women in Healthcare</h1>
-          <blockquote class="theme">“Breaking Barriers, Building Leaders: Women Driving Change in Healthcare”</blockquote>
+          <p class="eyebrow">ICWH 2026 · FIRST EDITION</p>
+          <h1 id="hero-heading">International Conference for Women in Healthcare</h1>
 
-          <div class="hero-meta">
-            <span class="date">December 2026</span>
-            <span class="sep">•</span>
+          <p class="theme-quote">“Rising Amazons in Healthcare: Equipping the Next Generation of Icons.”</p>
+
+          <div class="hero-meta" aria-hidden="false">
+            <span class="date">August 2026</span>
+            <span class="sep">·</span>
             <span class="location">Umuahia, Abia State, Nigeria</span>
           </div>
+
+          <p class="lead">ICWH is an annual international platform that brings together women across healthcare to learn, lead, connect and shape the future through mentorship, leadership development, collaboration and advocacy.</p>
 
           <div class="hero-ctas">
             <a class="btn primary large" href="mailto:info@icwhconference.org">Register Your Interest</a>
@@ -76,10 +75,36 @@
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <!-- Decorative illustration / image placeholder -->
           <div class="visual-card">
-            <div class="visual-accent"></div>
-            <img src="/assets/images/hero-placeholder.svg" alt="ICWH conference visual placeholder — replace with branded hero image" />
+            <svg class="hero-deco" width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1">
+                  <stop offset="0" stop-color="#F7D1E8"/>
+                  <stop offset="1" stop-color="#B99AD6"/>
+                </linearGradient>
+              </defs>
+              <rect x="0" y="0" width="640" height="420" rx="18" fill="url(#g1)" />
+            </svg>
+            <img src="/assets/images/hero-placeholder.svg" alt="Decorative conference visual" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION -->
+    <section id="vision" class="section vision">
+      <div class="container">
+        <div class="vision-grid">
+          <div class="vision-body">
+            <h2 class="section-title">ICWH — A Vision for the Future</h2>
+            <p class="lead">ICWH exists to elevate women in healthcare: to create mentorship pathways, strengthen leadership, foster interprofessional collaboration, and drive advocacy that leads to measurable improvements in women’s health and the systems that support it.</p>
+          </div>
+
+          <div class="vision-cta">
+            <p class="muted">Theme</p>
+            <h3>“Rising Amazons in Healthcare”</h3>
+            <p>Equipping the next generation of icons through practical skills, mentorship and opportunities to lead.</p>
+            <a class="btn ghost" href="#programme">Explore Programme Highlights</a>
           </div>
         </div>
       </div>
@@ -87,169 +112,126 @@
 
     <!-- ABOUT -->
     <section id="about" class="section container">
-      <h2 class="section-title">A platform for women shaping the future of healthcare.</h2>
-      <p class="lead">ICWH is an annual international platform designed to empower women in healthcare through mentorship, leadership development, career advancement, advocacy, networking, innovation and collaboration. The inaugural edition — ICWH 2026 — will bring together students, healthcare professionals, leaders, innovators, advocates and partners. ICWH will continue as an annual conference with future editions building on this global movement.</p>
+      <h2 class="section-title">About ICWH</h2>
+      <p class="lead">The International Conference for Women in Healthcare (ICWH) is an annual international platform connecting students, clinicians, researchers, educators, advocates and partners to accelerate professional development, mentorship and advocacy for women across healthcare disciplines.</p>
+
+      <ul class="about-list">
+        <li>Annual international platform focused on women in healthcare</li>
+        <li>Mentorship and leadership development</li>
+        <li>Interprofessional collaboration and networking</li>
+        <li>Women’s health advocacy, including cervical cancer awareness and HPV vaccination advocacy</li>
+        <li>Community engagement and practical workshops</li>
+      </ul>
     </section>
 
-    <!-- WHY ATTEND -->
-    <section id="why" class="section pale">
+    <!-- EXPERIENCE CARDS -->
+    <section id="experience" class="section pale">
       <div class="container">
-        <h2 class="section-title">Why Attend</h2>
-        <p class="lead">Join a global community advancing women's leadership, careers and impact across healthcare disciplines.</p>
+        <h2 class="section-title">The ICWH Experience</h2>
+        <p class="lead">A curated programme of mentorship, leadership and collaboration designed for emerging and established healthcare leaders.</p>
 
-        <div class="cards-grid">
-          <article class="card">
+        <div class="experience-cards">
+          <article class="feature card lilac">
             <div class="card-index">01</div>
-            <h3>Mentorship &amp; Empowerment</h3>
-            <p>Connect with mentors and role models who will support professional growth and provide guidance for career progression.</p>
+            <h3>Mentorship</h3>
+            <p>Structured mentorship programmes pairing emerging leaders with experienced professionals.</p>
           </article>
 
-          <article class="card">
+          <article class="feature card white">
             <div class="card-index">02</div>
-            <h3>Medical Career Advancement</h3>
-            <p>Gain insights and practical advice for clinical careers, research pathways and leadership roles in healthcare.</p>
+            <h3>Leadership</h3>
+            <p>Practical leadership workshops and coaching to build capability and confidence.</p>
           </article>
 
-          <article class="card">
+          <article class="feature card pink">
             <div class="card-index">03</div>
-            <h3>Sustainable Mentorship &amp; Leadership</h3>
-            <p>Engage in sessions that build long-term mentorship networks and sustainable leadership practices.</p>
+            <h3>Collaboration</h3>
+            <p>Interprofessional sessions that foster teamwork across clinical, academic and policy sectors.</p>
           </article>
 
-          <article class="card">
+          <article class="feature card purple">
             <div class="card-index">04</div>
-            <h3>Women’s Health Advocacy</h3>
-            <p>Explore policy, advocacy strategies, and community initiatives to advance women’s health at local and global levels.</p>
-          </article>
-
-          <article class="card">
-            <div class="card-index">05</div>
-            <h3>Innovation &amp; Collaboration</h3>
-            <p>Discover innovations in healthcare delivery, technology, and cross-disciplinary collaboration that improve outcomes for women.</p>
-          </article>
-
-          <article class="card">
-            <div class="card-index">06</div>
-            <h3>Students in Healthcare</h3>
-            <p>A dedicated focus for students to learn, network, and prepare for leadership roles in clinical and public health fields.</p>
+            <h3>Advocacy</h3>
+            <p>Sessions on women’s health advocacy, policy influence and community impact.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section container">
-      <h2 class="section-title">The ICWH Experience</h2>
-      <p class="lead">A thoughtfully curated conference experience combining inspiration, learning and practical skills.</p>
+    <!-- PROGRAMME HIGHLIGHTS -->
+    <section id="programme" class="section container">
+      <h2 class="section-title">Programme Highlights</h2>
+      <p class="lead">Key programme elements planned for ICWH 2026.</p>
 
-      <ul class="experience-grid" aria-label="Conference experience">
-        <li><strong>Keynote Sessions</strong><span>Visionary leadership, research and inspiration.</span></li>
-        <li><strong>Panel Discussions</strong><span>Diverse perspectives on practice, policy and systems change.</span></li>
-        <li><strong>Mentorship</strong><span>One-to-one and group mentorship sessions.</span></li>
-        <li><strong>Leadership Development</strong><span>Practical workshops and leadership coaching.</span></li>
-        <li><strong>Networking</strong><span>Structured and informal networking across sectors.</span></li>
-        <li><strong>Advocacy &amp; Action</strong><span>Translating insights into practical initiatives.</span></li>
-        <li><strong>Workshops</strong><span>Hands-on skill-building and career development workshops.</span></li>
-        <li><strong>Career Development</strong><span>Sessions for CVs, research portfolios and career planning.</span></li>
-      </ul>
+      <ol class="programme-list">
+        <li><strong>Opening & Keynote Conversations</strong> — Inspiring leadership and vision.</li>
+        <li><strong>Leadership & Mentorship Sessions</strong> — Practical coaching and long-term mentorship planning.</li>
+        <li><strong>Interprofessional Collaboration</strong> — Cross-sector panels and case studies.</li>
+        <li><strong>Cervical Cancer Awareness Walk</strong> — Community engagement and public awareness.</li>
+        <li><strong>HPV Vaccination Advocacy</strong> — Policy and outreach sessions.</li>
+        <li><strong>Networking & Community</strong> — Structured networking to build partnerships.</li>
+      </ol>
+    </section>
+
+    <!-- FEATURED EDITION -->
+    <section id="edition" class="section edition">
+      <div class="container edition-grid">
+        <div class="edition-body">
+          <p class="eyebrow">ICWH 2026 · FIRST EDITION</p>
+          <h2>Umuahia is where it begins.</h2>
+          <p class="lead">August 2026 · Umuahia, Abia State, Nigeria — Targeting 1,200+ participants across students, healthcare professionals, educators and partners.</p>
+        </div>
+
+        <div class="edition-visual" aria-hidden="true">
+          <div class="edition-card">
+            <div class="tag">First Edition</div>
+            <div class="meta">August 2026</div>
+            <div class="meta">Umuahia, Abia State, Nigeria</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- SPEAKERS -->
     <section id="speakers" class="section pale">
       <div class="container">
-        <h2 class="section-title">Meet the Speakers</h2>
-        <p class="lead">Speaker announcements will be made in due course. Subscribe for updates.</p>
+        <h2 class="section-title">Speakers</h2>
+        <p class="lead">Speaker announcements are coming soon. We are curating a diverse lineup of healthcare leaders, educators and advocates.</p>
 
-        <div class="speakers-grid">
-          <div class="speaker-card">
-            <div class="speaker-photo placeholder"></div>
-            <div class="speaker-body">
-              <h3>Speaker Announcement Coming Soon</h3>
-              <p class="muted">Healthcare Leaders</p>
-            </div>
-          </div>
-
-          <div class="speaker-card">
-            <div class="speaker-photo placeholder"></div>
-            <div class="speaker-body">
-              <h3>Speaker Announcement Coming Soon</h3>
-              <p class="muted">Medical Professionals</p>
-            </div>
-          </div>
-
-          <div class="speaker-card">
-            <div class="speaker-photo placeholder"></div>
-            <div class="speaker-body">
-              <h3>Speaker Announcement Coming Soon</h3>
-              <p class="muted">Public Health Experts</p>
-            </div>
-          </div>
-
-          <div class="speaker-card">
-            <div class="speaker-photo placeholder"></div>
-            <div class="speaker-body">
-              <h3>Speaker Announcement Coming Soon</h3>
-              <p class="muted">Women’s Health Advocates</p>
-            </div>
-          </div>
-
-          <div class="speaker-card">
-            <div class="speaker-photo placeholder"></div>
-            <div class="speaker-body">
-              <h3>Speaker Announcement Coming Soon</h3>
-              <p class="muted">Healthcare Innovators</p>
-            </div>
-          </div>
+        <div class="speakers-coming">
+          <div class="speaker-placeholder">Speakers Coming Soon</div>
         </div>
       </div>
     </section>
 
-    <!-- PROGRAMME -->
-    <section id="programme" class="section container">
-      <h2 class="section-title">ICWH 2026 Programme</h2>
-      <p class="lead">Planned programme categories. Detailed programme coming soon.</p>
+    <!-- PARTNERS -->
+    <section id="partners" class="section container">
+      <h2 class="section-title">Partners & Sponsors</h2>
+      <p class="lead">Build the future with us. We welcome institutional partners, sponsors and collaborators who share our vision.</p>
 
-      <div class="programme-grid">
-        <div class="prog-card"><strong>Keynote Addresses</strong></div>
-        <div class="prog-card"><strong>Leadership Sessions</strong></div>
-        <div class="prog-card"><strong>Panel Discussions</strong></div>
-        <div class="prog-card"><strong>Mentorship Sessions</strong></div>
-        <div class="prog-card"><strong>Career Development</strong></div>
-        <div class="prog-card"><strong>Women’s Health Advocacy</strong></div>
-        <div class="prog-card"><strong>Networking</strong></div>
-        <div class="prog-card"><strong>Workshops</strong></div>
+      <div class="partners-grid" aria-hidden="false">
+        <div class="logo-slot">Logo slot</div>
+        <div class="logo-slot">Logo slot</div>
+        <div class="logo-slot">Logo slot</div>
+        <div class="logo-slot">Logo slot</div>
       </div>
 
-      <p class="muted note">Detailed programme coming soon.</p>
-    </section>
-
-    <!-- PARTNERSHIP -->
-    <section id="partners" class="section pale">
-      <div class="container partners">
-        <h2 class="section-title">Let’s build a better future for healthcare together.</h2>
-        <p class="lead">ICWH welcomes partnerships with corporate organisations, healthcare institutions, NGOs, government agencies, universities, professional associations, healthcare brands, foundations and individual supporters. Partner with us to support mentorship, leadership development and advocacy for women in healthcare.</p>
-
-        <div class="partner-cta">
-          <a class="btn primary" href="mailto:partnerships@icwhconference.org">Partner With Us</a>
-          <p class="muted small">Email: partnerships@icwhconference.org</p>
-        </div>
-
-        <div class="partner-logos" aria-hidden="true">
-          <!-- Placeholder area for sponsor logos (replace with actual logos later) -->
-          <div class="logo-slot">Logo 1</div>
-          <div class="logo-slot">Logo 2</div>
-          <div class="logo-slot">Logo 3</div>
-        </div>
+      <div class="partner-cta">
+        <a class="btn primary" href="mailto:partnerships@icwhconference.org">Partnership Enquiries</a>
       </div>
     </section>
 
-    <!-- REGISTRATION / INTEREST -->
-    <section class="section registration">
+    <!-- REGISTRATION CTA -->
+    <section id="register" class="section registration">
       <div class="container registration-inner">
-        <h2 class="section-title">Be part of the movement.</h2>
-        <p class="lead">Registration and official conference updates will be announced soon. Leave your interest and be among the first to receive updates.</p>
-        <a class="btn primary large" href="mailto:info@icwhconference.org">Register Your Interest</a>
-        <p class="muted small">Currently links to <code>info@icwhconference.org</code>. This can be replaced with a registration form later.</p>
+        <h2 class="section-title">There is a place for your story.</h2>
+        <p class="lead">Join ICWH 2026. Whether you are a student, practitioner, educator or organisation, your voice and participation matter.</p>
+        <a class="btn primary large" href="mailto:info@icwhconference.org?subject=ICWH%202026%20Registration%20Interest">Register Your Interest</a>
+
+        <div class="contacts">
+          <a href="mailto:info@icwhconference.org">info@icwhconference.org</a>
+          <a href="mailto:partnerships@icwhconference.org">partnerships@icwhconference.org</a>
+        </div>
       </div>
     </section>
 
@@ -298,13 +280,14 @@
 
       <nav class="footer-nav" aria-label="Footer">
         <a href="/#about">About</a>
-        <a href="/#why">Why Attend</a>
+        <a href="/#experience">Experience</a>
         <a href="/#programme">Programme</a>
         <a href="/#speakers">Speakers</a>
         <a href="/#partners">Partners</a>
         <a href="/#contact">Contact</a>
       </nav>
 
+      <div class="edition-note">ICWH 2026 · Umuahia, Abia State, Nigeria</div>
       <div class="copyright">© 2026 ICWH. All rights reserved.</div>
     </div>
   </footer>
