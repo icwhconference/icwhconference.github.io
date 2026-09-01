@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Hero placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#F7D1E8" />
+      <stop offset="1" stop-color="#B99AD6" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="#fff" />
+  <rect x="60" y="60" width="1080" height="580" rx="18" fill="url(#g)" opacity="0.18" />
+  <g transform="translate(120,160)">
+    <rect width="960" height="380" rx="12" fill="#fff" stroke="#EDE6F4" />
+    <text x="40" y="70" font-family="DM Sans, Arial" font-size="28" fill="#6B2E8A">ICWH 2026 — First Edition</text>
+    <text x="40" y="120" font-family="Playfair Display, Georgia" font-size="42" fill="#2b2b2b">International Conference for Women in Healthcare</text>
+    <text x="40" y="180" font-family="DM Sans, Arial" font-size="20" fill="#6b6b6b">December 2026 — Umuahia, Abia State, Nigeria</text>
+  </g>
+</svg>
