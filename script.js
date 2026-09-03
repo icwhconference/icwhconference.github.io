@@ -1,73 +1,89 @@
-(function () {
-  const navToggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.nav-links');
-  const navLinks = document.querySelectorAll('.nav-links a');
+* {
+  box-sizing: border-box;
+}
 
-  function setNavOpen(open) {
-    document.documentElement.classList.toggle('nav-open', open);
+.site-header {
+  position: relative;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
 
-    if (navToggle) {
-      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    if (nav) {
-      nav.setAttribute('aria-hidden', open ? 'false' : 'true');
-    }
+.logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #333;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: block;
   }
 
-  // Start with the mobile menu closed
-  setNavOpen(false);
-
-  // Hamburger button
-  if (navToggle) {
-    navToggle.addEventListener('click', function () {
-      const isOpen = document.documentElement.classList.contains('nav-open');
-      setNavOpen(!isOpen);
-    });
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 15px;
+    width: 260px;
+    background: #ffffff;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    overflow: hidden;
+    z-index: 9999;
   }
 
-  // Close menu after clicking a navigation link
-  navLinks.forEach(function (link) {
-    link.addEventListener('click', function () {
-      setNavOpen(false);
-    });
-  });
+  .nav-links a {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+  }
 
-  // Close menu with Escape
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-      setNavOpen(false);
-    }
-  });
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
 
-  // Close menu when clicking outside it
-  document.addEventListener('click', function (event) {
-    if (
-      document.documentElement.classList.contains('nav-open') &&
-      nav &&
-      navToggle &&
-      !nav.contains(event.target) &&
-      !navToggle.contains(event.target)
-    ) {
-      setNavOpen(false);
-    }
-  });
-
-  // Smooth focus for anchor links
-  document.addEventListener('click', function (event) {
-    const link = event.target.closest('a');
-
-    if (!link || !link.hash) return;
-
-    const id = link.hash.slice(1);
-    const target = document.getElementById(id);
-
-    if (target) {
-      target.tabIndex = -1;
-
-      setTimeout(function () {
-        target.focus();
-      }, 300);
-    }
-  });
-})();
+  .nav-open .nav-links {
+    display: flex;
+  }
+}
+`
