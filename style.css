@@ -429,3 +429,24 @@ h3{
   h1{overflow-wrap:anywhere}
   h2{overflow-wrap:anywhere}
 }
+/* ICWH Logo */
+.icwh-logo {
+  display: block;
+  width: 190px;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-logo {
+  width: 220px;
+}
+
+@media (max-width: 719px) {
+  .icwh-logo {
+    width: 150px;
+  }
+
+  .footer-logo {
+    width: 180px;
+  }
+}
