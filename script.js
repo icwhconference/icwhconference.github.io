@@ -1,53 +1,73 @@
-// Mobile navigation toggle + close on link click; progressive enhancement
-(function(){
-  const html = document.documentElement;
+(function () {
   const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links a');
 
-  function setNavOpen(open){
-    if(open){
-      html.classList.add('nav-open');
-      navToggle.setAttribute('aria-expanded','true');
-    } else {
-      html.classList.remove('nav-open');
-      navToggle.setAttribute('aria-expanded','false');
+  function setNavOpen(open) {
+    document.documentElement.classList.toggle('nav-open', open);
+
+    if (navToggle) {
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    if (nav) {
+      nav.setAttribute('aria-hidden', open ? 'false' : 'true');
     }
   }
 
-  if(navToggle){
-    navToggle.addEventListener('click', ()=>{
-      const isOpen = html.classList.contains('nav-open');
+  // Start with the mobile menu closed
+  setNavOpen(false);
+
+  // Hamburger button
+  if (navToggle) {
+    navToggle.addEventListener('click', function () {
+      const isOpen = document.documentElement.classList.contains('nav-open');
       setNavOpen(!isOpen);
     });
   }
 
-  // Close menu when a nav link is clicked (mobile)
-  navLinks.forEach(link=>{
-    link.addEventListener('click', ()=>{
+  // Close menu after clicking a navigation link
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
       setNavOpen(false);
     });
   });
 
-  // Close menu on escape
-  document.addEventListener('keydown', (e)=>{
-    if(e.key === 'Escape') setNavOpen(false);
-  });
-
-  // Smooth focus-visible for keyboard users
-  document.addEventListener('click', (e)=>{
-    if(e.target.tagName === 'A' && e.target.hash){
-      // allow anchor default then focus target
-      const id = e.target.hash.slice(1);
-      const el = document.getElementById(id);
-      if(el){
-        el.tabIndex = -1;
-        setTimeout(()=> el.focus(), 300);
-      }
+  // Close menu with Escape
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      setNavOpen(false);
     }
   });
 
-  // Basic HTML validity safety: log if missing main nav
-  if(!document.querySelector('nav[aria-label="Main navigation"]')){
-    console.warn('Main navigation not found. Ensure the header has correct markup.');
-  }
+  // Close menu when clicking outside it
+  document.addEventListener('click', function (event) {
+    if (
+      document.documentElement.classList.contains('nav-open') &&
+      nav &&
+      navToggle &&
+      !nav.contains(event.target) &&
+      !navToggle.contains(event.target)
+    ) {
+      setNavOpen(false);
+    }
+  });
+
+  // Smooth focus for anchor links
+  document.addEventListener('click', function (event) {
+    const link = event.target.closest('a');
+
+    if (!link || !link.hash) return;
+
+    const id = link.hash.slice(1);
+    const target = document.getElementById(id);
+
+    if (target) {
+      target.tabIndex = -1;
+
+      setTimeout(function () {
+        target.focus();
+      }, 300);
+    }
+  });
 })();
