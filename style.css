@@ -94,22 +94,39 @@ button,
 }
 
 /* Mobile menu - ensure full-width and no overflow */
-.nav-links{
-  position:fixed;
-  left:0;
-  right:0;
-  top:64px;
-  bottom:0;
-  background:linear-gradient(180deg,var(--white),rgba(247,209,232,0.98));
-  transform:translateY(-110%);
-  transition:transform .28s ease;
-  list-style:none;
-  padding:1.25rem;
-  margin:0;
-  display:flex;
-  flex-direction:column;
-  gap:0.75rem;
-  overflow-y:auto;
+.nav-links {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: calc(100vh - 64px);
+
+  margin: 0;
+  padding: 1.5rem 1rem;
+
+  background: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+
+  list-style: none;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  transform: translateY(-110%);
+  visibility: hidden;
+  opacity: 0;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.2s ease,
+    visibility 0.25s ease;
+
+  z-index: 100;
 }
 .nav-links a{
   color:var(--ink);
