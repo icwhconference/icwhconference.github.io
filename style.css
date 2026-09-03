@@ -112,66 +112,125 @@ button,
 }
 
 /* Mobile navigation */
-@media (max-width: 719px) {
-  .nav-links {
-    position: fixed;
-    top: 64px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: calc(100vh - 64px);
-
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.75rem;
-
-    margin: 0;
-    padding: 1.5rem 1rem;
-
-    background: var(--white);
-
-    overflow-y: auto;
-    overflow-x: hidden;
-
-    transform: translateY(-110%);
-    visibility: hidden;
-    opacity: 0;
-
-    transition:
-      transform 0.25s ease,
-      opacity 0.2s ease,
-      visibility 0.25s ease;
-
-    z-index: 100;
-  }
-
-  html.nav-open .nav-links {
-    transform: translateY(0);
-    visibility: visible;
-    opacity: 1;
+2
+@media (max-width:719px){
+3
+ 
+4
+.nav-links{
+5
+position:fixed;
+6
+top:64px;
+7
+left:0;
+8
+right:0;
+9
+width:100%;
+10
+min-height:calc(100dvh - 64px);
+11
+display:flex;
+12
+flex-direction:column;
+13
+align-items:stretch;
+14
+gap:.75rem;
+15
+margin:0;
+16
+padding:1.5rem 1rem;
+17
+background:var(--white);
+18
+overflow-y:auto;
+19
+overflow-x:hidden;
+20
+transform:translateY(-110%);
+21
+visibility:hidden;
+22
+opacity:0;
+23
+pointer-events:none;
+24
+transition:transform .3s ease, opacity .3s ease;
+25
+z-index:100;
+26
 }
+27
+ 
+28
+html.nav-open .nav-links{
+29
+transform:translateY(0);
+30
+visibility:visible;
+31
+opacity:1;
+32
+pointer-events:auto;
+33
+}
+34
+ 
+35
 .nav-links a{
-  color:var(--ink);
-  text-decoration:none;
-  padding:0.6rem 0;
-  font-weight:600;
-  font-family: var(--font-primary);
+36
+color:var(--ink);
+37
+text-decoration:none;
+38
+padding:.6rem 0;
+39
+font-weight:600;
+40
+font-family:var(--font-primary);
+41
 }
-.nav-actions{display:none}
-
-.nav-toggle {
-  background: none;
-  border: 0;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  width: 44px;
-  height: 44px;
-  flex-shrink: 0;
-  z-index: 1000;
+42
+ 
+43
+.nav-actions{
+44
+display:none;
+45
+}
+46
+ 
+47
+.nav-toggle{
+48
+background:none;
+49
+border:0;
+50
+padding:.5rem;
+51
+display:flex;
+52
+align-items:center;
+53
+justify-content:center;
+54
+cursor:pointer;
+55
+width:44px;
+56
+height:44px;
+57
+flex-shrink:0;
+58
+z-index:1000;
+59
+}
+60
+ 
+61
 }
 .hamburger{width:22px;height:3px;background:var(--ink);display:block;position:relative;border-radius:2px}
 .hamburger::after,.hamburger::before{content:"";position:absolute;left:0;width:22px;height:3px;background:var(--ink);transition:transform .25s ease}
